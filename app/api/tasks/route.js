@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getTasks, addTask, updateTask, deleteTask, toggleTaskCompletion } from '../../../utils/taskutils';
+import { getTasks, addTask, updateTask, deleteTask, toggleTaskCompletion } from '../../utils/taskutils';
 
 export async function GET() {
   try {
