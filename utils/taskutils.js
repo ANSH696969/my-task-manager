@@ -1,13 +1,13 @@
 import { MongoClient, ObjectId } from 'mongodb';
 
 const MONGODB_URI = process.env.MONGO_URI;
-const DB_NAME = "taskdb"; // Make sure your database name is correct
+const DB_NAME = "taskdb";
 
 if (!MONGODB_URI) {
   throw new Error("⚠️ MONGO_URI is missing in environment variables.");
 }
 
-// Global cache to prevent multiple connections
+
 let cachedClient = global.mongoClient || null;
 let cachedDb = global.mongoDb || null;
 
